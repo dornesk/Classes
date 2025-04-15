@@ -1,5 +1,5 @@
 package mentorship.roadmap.Java_Core.step2_Base.topic7_Methods.task2_EvenNumbersArray;
-/*
+
 import java.util.Arrays;
 
 public class EvenNumbersArray {
@@ -17,4 +17,3 @@ public class EvenNumbersArray {
         System.out.println("Первые 5 чётных чисел: " + Arrays.toString(evens));
     }
 }
-*/
