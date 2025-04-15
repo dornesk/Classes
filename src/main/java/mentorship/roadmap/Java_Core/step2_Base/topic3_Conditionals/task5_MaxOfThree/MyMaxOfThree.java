@@ -10,9 +10,9 @@ public class MyMaxOfThree {
 
         int max;
 
-        if (x > y && x > z) {
+        if (x >= y && x >= z) {
             max = x;
-        } else if (y > x && y > z) {
+        } else if (y >= x && y >= z) {
             max = y;
         } else {
             max = z;
