@@ -7,7 +7,7 @@ public class MapDemo {
 
     public static void main(String[] args) {
 
-        HashMap<String, Integer> students = new HashMap<>();
+        Map<String, Integer> students = new HashMap<>();
         students.put("Alice", 85);
         students.put("Bob", 72);
         students.put("Charlie", 90);

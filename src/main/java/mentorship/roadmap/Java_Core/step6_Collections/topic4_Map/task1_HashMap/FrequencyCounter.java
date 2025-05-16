@@ -9,7 +9,7 @@ public class FrequencyCounter {
     public static void main(String[] args) {
 
         String[] arr = {"Apple", "Banana", "Apple", "Orange", "Banana", "Apple"};
-        HashMap<String, Integer> map = new HashMap<>();
+        Map<String, Integer> map = new HashMap<>();
 
         for (String s : arr) {
             map.put(s, map.getOrDefault(s, 0) + 1);
