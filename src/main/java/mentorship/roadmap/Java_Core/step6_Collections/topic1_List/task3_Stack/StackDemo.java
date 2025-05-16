@@ -14,7 +14,7 @@ public class StackDemo {
         System.out.println(stack.peek());
         System.out.println();
 
-        while (stack.iterator().hasNext()) {
+        while (!stack.isEmpty()) {
             System.out.println(stack.pop());
         }
     }
