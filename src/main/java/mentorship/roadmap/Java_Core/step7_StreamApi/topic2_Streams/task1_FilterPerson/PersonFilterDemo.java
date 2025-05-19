@@ -1,11 +1,8 @@
 package mentorship.roadmap.Java_Core.step7_StreamApi.topic2_Streams.task1_FilterPerson;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class PersonFilterDemo {
     public static void main(String[] args) {
