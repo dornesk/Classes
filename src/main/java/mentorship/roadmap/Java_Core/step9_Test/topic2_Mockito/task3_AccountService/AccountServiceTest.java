@@ -5,19 +5,29 @@ import mentorship.roadmap.Java_Core.step9_Test.topic2_Mockito.task3_AccountServi
 import mentorship.roadmap.Java_Core.step9_Test.topic2_Mockito.task3_AccountService.forTest.AccountService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
 class AccountServiceTest {
+
+    @Mock
     private AccountRepository accountRepository;
+
+    @InjectMocks
     private AccountService accountService;
 
     @BeforeEach
     void setUp() {
+        MockitoAnnotations.openMocks(this);
+        /*
         accountRepository = mock(AccountRepository.class);
         accountService = new AccountService(accountRepository);
+         */
     }
 
     @Test

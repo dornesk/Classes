@@ -5,19 +5,29 @@ import mentorship.roadmap.Java_Core.step9_Test.topic2_Mockito.task2_AuthService.
 import mentorship.roadmap.Java_Core.step9_Test.topic2_Mockito.task2_AuthService.forTest.UserRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.*;
 
 class AuthServiceTest {
+
+    @Mock
     private UserRepository userRepository;
+
+    @InjectMocks
     private AuthService authService;
 
     @BeforeEach
     void setUp() {
+        MockitoAnnotations.openMocks(this);
+        /*
         userRepository = mock(UserRepository.class);
         authService = new AuthService(userRepository);
+         */
     }
 
     @Test

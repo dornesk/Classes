@@ -6,6 +6,9 @@ import mentorship.roadmap.Java_Core.step9_Test.topic2_Mockito.task1_OrderService
 import mentorship.roadmap.Java_Core.step9_Test.topic2_Mockito.task1_OrderService.forTest.OrderService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -13,17 +16,24 @@ import static org.mockito.Mockito.*;
 
 class OrderServiceTest {
 
+    @Mock
     private InventoryService inventoryService;
+
+    @Mock
     private OrderRepository orderRepository;
+
+    @InjectMocks
     private OrderService orderService;
 
     @BeforeEach
     void setUp() {
-        //создаем моки для зависимостей
+        MockitoAnnotations.openMocks(this);
+        /*//создаем моки для зависимостей
         inventoryService = mock(InventoryService.class);
         orderRepository = mock(OrderRepository.class);
         //экземпляр OrderService с моками
         orderService = new OrderService(inventoryService, orderRepository);
+         */
     }
 
     @Test
